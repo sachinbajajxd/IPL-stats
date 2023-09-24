@@ -102,6 +102,12 @@ module.exports.getExtras = async(req, res) => {
 
     console.log(year);
 
+    const check = await Match.find({season: year});
+    console.log(check.length);
+    if(check.length==0){
+      return res.json({message: "No match found"});
+    }
+
     const response = await Match.aggregate([
 
       {
@@ -142,6 +148,12 @@ module.exports.economicalBowler = async(req, res) => {
     var year=parseInt(req.params.id, 10);
 
     console.log(year);
+
+    const check = await Match.find({season: year});
+    console.log(check.length);
+    if(check.length==0){
+      return res.json({message: "No match found"});
+    }
 
     const response = await Match.aggregate([
 
@@ -215,6 +227,11 @@ module.exports.matchesWon = async (req, res) => {
   console.log(year);
 
   try{
+    const check = await Match.find({season: year});
+    console.log(check.length);
+    if(check.length==0){
+      return res.json({message: "No match found"});
+    }
     const response = await Match.aggregate([
       {
         $match: { season: year } // Filter matches for the desired year
