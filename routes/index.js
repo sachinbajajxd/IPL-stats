@@ -10,8 +10,8 @@ router.get('/', (req, res) => {
 
 router.get('/matches-per-year', matchControllers.matchesPerYear);
 router.get('/matches-won-by-each-team', matchControllers.matchesWonByEachTeam);
-router.get('/get-extras', matchControllers.getExtras);
-router.get('/economical-bowler', matchControllers.economicalBowler);
-router.get('/match-stats', matchControllers.matchesWon);
+router.get('/get-extras/:id', matchControllers.getExtras);
+router.get('/economical-bowler/:id', matchControllers.economicalBowler);
+router.get('/match-stats/:id', matchControllers.matchesWon);
 
 module.exports=router;

@@ -98,7 +98,9 @@ module.exports.getExtras = async(req, res) => {
 
   try{
 
-    var year=req.params | 2017;
+    var year=parseInt(req.params.id, 10);
+
+    console.log(year);
 
     const response = await Match.aggregate([
 
@@ -137,7 +139,9 @@ module.exports.economicalBowler = async(req, res) => {
 
   try{
 
-    var year=req.params | 2017;
+    var year=parseInt(req.params.id, 10);
+
+    console.log(year);
 
     const response = await Match.aggregate([
 
@@ -195,7 +199,7 @@ module.exports.economicalBowler = async(req, res) => {
       }
     ]);
 
-    console.log(response);
+    // console.log(response);
     return res.status(200).json(response);
 
   }catch(error){
@@ -206,7 +210,9 @@ module.exports.economicalBowler = async(req, res) => {
 
 module.exports.matchesWon = async (req, res) => {
 
-  var year=req.params | 2017;
+  var year=parseInt(req.params.id, 10);
+
+  console.log(year);
 
   try{
     const response = await Match.aggregate([
