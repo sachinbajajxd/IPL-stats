@@ -6,5 +6,24 @@
     "express": "^4.18.2",
     "mongoose": "^7.5.2",
     "nodemon": "^3.0.1"
-  }
+  },
+  "name": "backend",
+  "description": "Hello world",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sachinbajajxd/IPL-stats.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sachinbajajxd/IPL-stats/issues"
+  },
+  "homepage": "https://github.com/sachinbajajxd/IPL-stats#readme"
 }
